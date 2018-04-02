@@ -1,0 +1,48 @@
+.multiselect
+    overflow: hidden
+    font-family: sans-serif
+    &__input
+        display: flex
+        overflow: hidden
+        border: 1px solid grey
+        input
+            border: none
+            display: block
+            padding: 1em
+            border-radius: 5px
+            flex: 95%
+
+
+        &__btn
+            border: none
+            cursor: pointer
+            flex: 5%
+            svg
+                height: 25px
+                width: 25px
+                transform: rotate(0deg)
+                transition: transform .4s
+
+                &.--rotate
+                    transform: rotate(180deg)
+
+    &__options
+
+        .input--check
+            visibility: hidden
+            position: absolute
+
+            + label
+                display: block
+                padding: 8px
+                background: #fff
+                cursor: pointer
+                transition: background .4s
+
+                &:hover
+                    background: #d1d1d1
+
+            &:checked + label
+                background-color: #ccc
+
+

@@ -1,0 +1,4 @@
+<input type="search" (keyup)="search($event.target.value)">
+<div class="post-container">
+  <app-post-detail class="post" *ngFor="let post$ of posts" [post]="post$"></app-post-detail>
+</div>
