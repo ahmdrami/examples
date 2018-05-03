@@ -1,4 +1,13 @@
-<input type="search" (keyup)="search($event.target.value)">
-<div class="post-container">
-  <app-post-detail class="post" *ngFor="let post$ of posts" [post]="post$"></app-post-detail>
+<div *ngIf="posts; else showSpinner" class="">
+
+  <div class="form-group">
+    <input type="text" class="" (keyup)="search($event.target.value)">
+  </div>
+  <div class="row">
+    <app-post-detail class="col-lg-6 col-md-12 col-sm-12 col-xs-12" *ngFor="let post$ of posts" [post]="post$"></app-post-detail>
+  </div>
+
 </div>
+<ng-template #showSpinner>
+  <app-spinner [size]="'lg'"></app-spinner>
+</ng-template>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpserviceService } from '../../services/httpservice.service';
 import { Observable } from 'rxjs/Observable';
 import { Post } from '../post-model';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-post-list',
@@ -11,13 +11,14 @@ import { Post } from '../post-model';
 export class PostListComponent implements OnInit {
   posts: Observable<Post>;
   constructor(
-    private svc: HttpserviceService
+    private postSvc: PostService
   ) { }
 
   ngOnInit() {
-    this.svc.getData().subscribe(
+    this.postSvc.getData().subscribe(
       data => {
         this.posts = data;
+        console.log(this.posts);
       },
       error => console.log(error)
     );

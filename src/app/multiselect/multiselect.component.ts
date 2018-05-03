@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpserviceService } from '../services/httpservice.service';
 import { DataModel } from './data.model';
 import { Observable } from 'rxjs/Observable';
 
@@ -14,12 +13,10 @@ export class MultiSelectBodyComponent implements OnInit {
     {id: 10, name: 'Clementina DuBuque', username: 'Moriah.Stanton'}
   ];
   constructor(
-    private dataSvc: HttpserviceService
 
   ) { }
 
   ngOnInit() {
-      this.data = this.dataSvc.getData();
   }
 
 }
