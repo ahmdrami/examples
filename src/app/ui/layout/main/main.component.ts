@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styles: []
 })
 export class MainComponent implements OnInit {
+    collapsed: boolean;
     constructor() {}
 
     ngOnInit() {}

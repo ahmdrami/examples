@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Attribute, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-post-detail',
@@ -6,9 +6,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./post-detail.component.sass']
 })
 export class PostDetailComponent implements OnInit {
-
+  static nextId = 1;
   @Input() post: any;
-  constructor() { }
+  @HostBinding() id = `post-list-item-${PostDetailComponent.nextId++}`;
+  @HostBinding('style.padding') padding = '1px';
+  
+  constructor(
+    @Attribute('class') private hostId: string // Get directive attribute
+  ) { }
 
   ngOnInit() {
   }
