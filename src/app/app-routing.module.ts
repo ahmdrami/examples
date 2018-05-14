@@ -4,7 +4,8 @@ import { LayoutComponent } from './ui/layout/layout.component';
 
 const routes: Routes = [
     { path: 'posts', loadChildren: 'app/posts/posts.module#PostsModule' },
-    { path: 'dform', loadChildren: 'app/dynamic-form/dynamic-form.module#DynamicFormModule' }
+    { path: 'dform', loadChildren: 'app/dynamic-form/dynamic-form.module#DynamicFormModule' },
+    { path: 'animations', loadChildren: 'app/animations/animations.module#AnimationsModule'}
 ];
 
 @NgModule({

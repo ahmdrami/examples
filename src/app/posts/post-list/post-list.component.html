@@ -4,7 +4,7 @@
         <div class="form-group">
             <input type="text" class="" (keyup)="search($event.target.value)">
         </div>
-        <div class="row">
+        <div class="card-columns">
             <app-post-detail class="col-lg-4 col-md-6 col-sm-12 col-xs-12" *ngFor="let post$ of posts" [post]="post$"></app-post-detail>
         </div>
 
