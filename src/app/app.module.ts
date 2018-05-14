@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { UiModule } from './ui/ui.module';
 import { FILE_UPLOAD_CONFIG } from './file-upload/settings';
 import { CustomErrorHandler } from './core/error-handler';
+import { SanitizeHtmlComponent } from './sanitize-html/sanitize-html.component';
+import { KeepHtmlPipe } from './sanitize-html/keep-html.pipe';
 
 @NgModule({
     declarations: [AppComponent],
